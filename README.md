@@ -30,4 +30,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 # page-URL
+https://couchnoemi.github.io/password-generator/
+
+# git-hub url
 https://github.com/CouchNoemi/password-generator
