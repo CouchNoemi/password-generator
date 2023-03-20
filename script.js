@@ -116,7 +116,6 @@ function generatePassword() {
   var includeNumbers = confirm("Include numbers?");
   if (includeNumbers){
     allCharacters = allCharacters.concat(numericCharacters);
-    allCharacters += numericCharacters;
     console.log(allCharacters);
   }
 
@@ -124,7 +123,6 @@ function generatePassword() {
   var includeLowerCasedCharacters = confirm("Include Lower Case?");
   if (includeLowerCasedCharacters){
     allCharacters = allCharacters.concat(lowerCasedCharacters);
-    allCharacters += lowerCasedCharacters;
     console.log(allCharacters);
   }
  
@@ -132,7 +130,6 @@ function generatePassword() {
   var includeUpperCasedCharacters = confirm("Include Upper Case?");
   if (includeUpperCasedCharacters){
     allCharacters = allCharacters.concat(upperCasedCharacters);
-    allCharacters += upperCasedCharacters;
     console.log(allCharacters);
   }
 
@@ -140,17 +137,16 @@ function generatePassword() {
   var includeSpecialCharacters = confirm("Include Special Characters?");
   if (includeSpecialCharacters){
     allCharacters = allCharacters.concat(specialCharacters);
-    allCharacters += specialCharacters;
     console.log(allCharacters);
   }
-
+  var finalPassword = ''
   for(var i=0; i < passwordLength; i++){
-    var randChar = allCharacters[Math.floor(Math.random() * allCharacters.passwordLength)];
-    password += randChar;
-    
+    var randChar = allCharacters[Math.floor(Math.random() * allCharacters.length)];
+    finalPassword += randChar;
+    console.log (randChar);
   }
-  console.log(password);
-  return password;
+  console.log(finalPassword);
+  return finalPassword;
 }
 
 
